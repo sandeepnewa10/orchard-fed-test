@@ -1,111 +1,164 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+a {
+    text-decoration: none
+}
+
 /* Google font import */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
-:root{
-    --bg-red: #c60d2c;
-    --bg-white: #ffffff;
+
+:root {
+    --color-red: #c60d2c;
+    --color-white: #ffffff;
+    --color-grey: #898b8b;
 }
-body{
+
+body {
     font-family: 'Open Sans', sans-serif;
-    color: #fff;
+    color: var(--color-white);
     background-color: #0f1414;
     font-weight: 300;
     line-height: 1.9;
 }
 
-section{
-    height: 100vh;
+section {
     display: flex;
     justify-content: center;
-    align-items: center;   
-    h2{
+    align-items: center;
+
+    @media (max-width: 767.98px) {
+        padding: 15px;
+
+        h2 {
+            font-size: 23px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        height: 100vh;
+    }
+
+    h2 {
         font-size: 26px;
         text-transform: uppercase;
-        color:#fff;
         padding-bottom: 16px;
         position: relative;
         margin-bottom: 28px;
         font-weight: 300;
-        &::before{
-            content: '';
-            position: absolute;
-            bottom:0;
-            height: 1px;
-            width: 100%;
-            background-color: #fff;
-        }
     }
-    p{
-        margin-bottom: 30px;
+
+    p {
+        margin-bottom: 24px;
     }
-    span{
+
+    span {
         font-size: 16px;
         font-weight: 400;
-        color: var(--bg-red);
+        color: var(--color-red);
         text-transform: uppercase;
         margin-top: 10px;
         margin-bottom: 10px;
         display: flex;
     }
-    h3{
-        font-size: 18px;
-        font-weight: 600;     
-        line-height: 1.7;       
-    }
-    
-}
-// CSS: About
-// .about{
-//     &__info{
-//         h2{
-//             font-size: 26px;
-//             text-transform: uppercase;
-//             color:#fff;
-//             padding-bottom: 16px;
-//             position: relative;
-//             margin-bottom: 28px;
-//             font-weight: 300;
-//             &::before{
-//                 content: '';
-//                 position: absolute;
-//                 bottom:0;
-//                 height: 1px;
-//                 width: 100%;
-//                 background-color: #fff;
-//             }
-//         }
-//         p{
-//             margin-bottom: 30px;
-//         }
-//         span{
-//             font-size: 16px;
-//             font-weight: 400;
-//             color: var(--bg-red);
-//             text-transform: uppercase;
-//             margin-top: 10px;
-//             margin-bottom: 10px;
-//             display: flex;
-//         }
-//         h3{
-//             font-size: 18px;
-//             font-weight: 600;     
-//             line-height: 1.7;       
-//         }
-//     }
-// }
 
-figure{
+    h3 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.7;
+    }
+
+}
+
+figure {
     overflow: hidden;
-    img{
+
+    img {
         transform: scale(1);
         transition: all 0.3s ease;
-        
+
     }
-    &:hover img{
+
+    &:hover img {
         transform: scale(1.1);
     }
-}     
+}
+
+// CSS: About
+.about {
+    &__info {
+        h2 {
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                height: 1px;
+                width: 100%;
+                background-color: #fff;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+//CSS: Blog
+.blog {
+    &__title {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 70px;
+
+        @media (max-width: 767.98px) {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-weight: 300;
+
+            @media (max-width: 767.98px) {
+                font-size: 30px;
+                margin-bottom: 0;
+            }
+
+            @media (min-width: 768px) {
+                font-size: 41px;
+            }
+        }
+    }
+
+    &__content {
+        margin-bottom: 60px;
+
+        figure {
+            border-bottom: 4px solid var(--color-red);
+            margin-bottom: 27px;
+        }
+
+        p {
+            color: var(--color-grey);
+            line-height: 1.7;
+        }
+
+        .readmore {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--color-white);
+            padding-bottom: 7px;
+            border-bottom: 1px solid var(--color-red);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: var(--color-red);
+                border-color: var(--color-white);
+            }
+        }
+    }
+}

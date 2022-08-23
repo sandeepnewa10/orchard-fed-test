@@ -5,50 +5,58 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Google font import */
 :root {
-  --bg-red: #c60d2c;
-  --bg-white: #ffffff;
+  --color-red: #c60d2c;
+  --color-white: #ffffff;
+  --color-grey: #898b8b;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: #fff;
+  color: var(--color-white);
   background-color: #0f1414;
   font-weight: 300;
   line-height: 1.9;
 }
 
 section {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 767.98px) {
+  section {
+    padding: 15px;
+  }
+  section h2 {
+    font-size: 23px;
+  }
+}
+@media (min-width: 768px) {
+  section {
+    height: 100vh;
+  }
+}
 section h2 {
   font-size: 26px;
   text-transform: uppercase;
-  color: #fff;
   padding-bottom: 16px;
   position: relative;
   margin-bottom: 28px;
   font-weight: 300;
 }
-section h2::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  height: 1px;
-  width: 100%;
-  background-color: #fff;
-}
 section p {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 section span {
   font-size: 16px;
   font-weight: 400;
-  color: var(--bg-red);
+  color: var(--color-red);
   text-transform: uppercase;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -69,6 +77,70 @@ figure img {
 }
 figure:hover img {
   transform: scale(1.1);
+}
+
+.about__info h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+}
+@media (max-width: 767.98px) {
+  .about__info {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+.blog__title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+@media (max-width: 767.98px) {
+  .blog__title {
+    margin-bottom: 30px;
+  }
+}
+.blog__title h2 {
+  font-weight: 300;
+}
+@media (max-width: 767.98px) {
+  .blog__title h2 {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .blog__title h2 {
+    font-size: 41px;
+  }
+}
+.blog__content {
+  margin-bottom: 60px;
+}
+.blog__content figure {
+  border-bottom: 4px solid var(--color-red);
+  margin-bottom: 27px;
+}
+.blog__content p {
+  color: var(--color-grey);
+  line-height: 1.7;
+}
+.blog__content .readmore {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-white);
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--color-red);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+.blog__content .readmore:hover {
+  color: var(--color-red);
+  border-color: var(--color-white);
 }
 
 /*# sourceMappingURL=style.css.map */
