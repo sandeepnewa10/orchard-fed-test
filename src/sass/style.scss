@@ -7,7 +7,9 @@
 a {
     text-decoration: none
 }
-
+figure{
+    margin-bottom: 19px;
+}
 /* Google font import */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
@@ -161,4 +163,12 @@ figure {
             }
         }
     }
+}
+
+
+/* Bootstrap Modal title CSS */
+.model-wrap{
+    .modal-content{
+        color: var(--color-red);
+    }    
 }

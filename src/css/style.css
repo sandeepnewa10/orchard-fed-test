@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+figure {
+  margin-bottom: 19px;
+}
+
 /* Google font import */
 :root {
   --color-red: #c60d2c;
@@ -141,6 +145,11 @@ figure:hover img {
 .blog__content .readmore:hover {
   color: var(--color-red);
   border-color: var(--color-white);
+}
+
+/* Bootstrap Modal title CSS */
+.model-wrap .modal-content {
+  color: var(--color-red);
 }
 
 /*# sourceMappingURL=style.css.map */
