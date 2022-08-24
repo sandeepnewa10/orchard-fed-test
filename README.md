@@ -1,4 +1,4 @@
-# Webpack App Starter
+# Orchard fed test
 
 Frontend environment 
 
@@ -12,9 +12,14 @@ Includes the following features...
 - Source Maps
 - Caching
 
-## Usage
+## how to use
 
-Run Dev Server (Port 3000)
+1. Download code in your local device
+```
+git clone https://github.com/sandeepnewa10/orchard-fed-test
+```
+
+2. Run Dev Server (Port 3000)
 
 ```
   npm run dev
@@ -26,6 +31,12 @@ Run Dev Server (Port 3000)
 npm run build
 ```
 
+3. view 
+
+```
+  http://localhost:3000/
+```
+
 ## Demo App
 
 - index.js (main javascript)
@@ -33,4 +44,6 @@ npm run build
 - sass/style.scss (styles)
 
 ## Framework
-- Bootstrap framework
+- Bootstrap
+
+
