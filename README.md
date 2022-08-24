@@ -12,7 +12,7 @@ Includes the following features...
 - Source Maps
 - Caching
 
-## Usage## Usage
+## Usage
 
 Run Dev Server (Port 3000)
 
