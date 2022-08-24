@@ -7,9 +7,11 @@
 a {
     text-decoration: none
 }
-figure{
+
+figure {
     margin-bottom: 19px;
 }
+
 /* Google font import */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
@@ -28,21 +30,19 @@ body {
 }
 
 section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    padding-top: 100px;
+    overflow: hidden;
+    
     @media (max-width: 767.98px) {
-        padding: 15px;
+        padding: 50px 15px;
 
         h2 {
             font-size: 23px;
         }
-    }
-
-    @media (min-width: 768px) {
-        height: 100vh;
-    }
+    }  
+    @media (max-width: 575.98px) { 
+        padding: 37px 15px;
+     } 
 
     h2 {
         font-size: 26px;
@@ -59,7 +59,7 @@ section {
 
     span {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 600;
         color: var(--color-red);
         text-transform: uppercase;
         margin-top: 10px;
@@ -91,6 +91,7 @@ figure {
 
 // CSS: About
 .about {
+
     &__info {
         h2 {
             &::before {
@@ -104,8 +105,7 @@ figure {
         }
 
         @media (max-width: 767.98px) {
-            margin-top: 20px;
-            margin-bottom: 50px;
+            margin-top: 20px;            
         }
     }
 }
@@ -167,8 +167,11 @@ figure {
 
 
 /* Bootstrap Modal title CSS */
-.model-wrap{
-    .modal-content{
+.model-wrap {
+    .modal-content {
         color: var(--color-red);
-    }    
+    }
 }
+
+
+// @import "~bootstrap/scss/bootstrap";
