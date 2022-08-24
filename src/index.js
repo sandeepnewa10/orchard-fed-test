@@ -1,7 +1,4 @@
-
 import './sass/style.scss'
-
-
 
 // Button OnClick Event
 const btns = Array.from( document.querySelectorAll('a'))
